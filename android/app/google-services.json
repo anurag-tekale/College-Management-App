@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "537665064705",
+    "project_id": "mahindrauniversity-saksi",
+    "storage_bucket": "mahindrauniversity-saksi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537665064705:android:14627202099cb42415d500",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537665064705-i9le7qr242ig2kktnbrmos9lr1aa60hf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKR48a4IwQL01_FbwtJCgIn5Lhh_5a69k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537665064705-i9le7qr242ig2kktnbrmos9lr1aa60hf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
