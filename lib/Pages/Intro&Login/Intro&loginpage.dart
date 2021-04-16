@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:keyboard_visibility/keyboard_visibility.dart';
+import 'package:myapp/Pages/DashBoard/Students/Dashboard.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -220,8 +221,17 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Column(
                   children: <Widget>[
-                    PrimaryButton(
-                      btnText: "Login",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => Homescreen(),
+                          ),
+                        );
+                      },
+                      child: PrimaryButton(
+                        btnText: "Login",
+                      ),
                     ),
                     SizedBox(
                       height: 20,
@@ -279,8 +289,17 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Column(
                   children: <Widget>[
-                    PrimaryButton(
-                      btnText: "Create Account",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => Homescreen(),
+                          ),
+                        );
+                      },
+                      child: PrimaryButton(
+                        btnText: "Create Account",
+                      ),
                     ),
                     SizedBox(
                       height: 20,

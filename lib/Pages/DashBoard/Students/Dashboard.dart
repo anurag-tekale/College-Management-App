@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:myapp/Pages/Assignments/mainfile.dart';
 
 //import 'package:flutter_palette/flutter_palette.dart';
 class Homescreen extends StatefulWidget {
@@ -80,8 +81,9 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.arrow_back_ios),
         backgroundColor: Color(0XffEA3A4F),
-        title: Text('Dashboard'),
+        title: Text("Student's Dashboard"),
         centerTitle: true,
       ),
       body: SizedBox.expand(
@@ -97,7 +99,20 @@ class _HomescreenState extends State<Homescreen> {
               mainAxisSpacing: 12,
               padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               children: <Widget>[
-                MyItems(Icons.assignment, 'Assignment', 0xff0A0101),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => AssignmentsPage(),
+                      ),
+                    );
+                  },
+                  child: MyItems(
+                    Icons.assignment,
+                    'Assignment',
+                    0xff0A0101,
+                  ),
+                ),
                 MyItems(Icons.grade_outlined, 'Grades', 0xff0A0101),
                 MyItems(Icons.payments_outlined, 'Pay Fee', 0xff0A0101),
                 MyItems(Icons.work_off, 'Holidays', 0xff0A0101),

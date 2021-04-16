@@ -12,7 +12,9 @@ class Header extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
           ),
           Text(
             "Assignments",
