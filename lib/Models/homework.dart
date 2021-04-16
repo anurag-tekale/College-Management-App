@@ -8,7 +8,7 @@ class Homework {
 
 List<Homework> recentHomeworks = [
   Homework(
-    title: "Instantaneous Centres Exercises",
+    title: "Instantaneous Centres",
     dueTime: DateTime.parse("2020-06-08 10:30:00"),
   ),
   Homework(

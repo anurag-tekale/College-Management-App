@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/Assignments/mainfile.dart';
-import 'package:myapp/Pages/Intro&Login/Intro&loginpage.dart';
+import 'package:myapp/Pages/Profile/mainfile.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mahindra University',
-      home: AssignmentsPage(),
+      home: ProfilePage(),
     );
   }
 }
