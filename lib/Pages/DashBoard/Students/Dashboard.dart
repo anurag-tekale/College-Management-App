@@ -109,7 +109,7 @@ class _HomescreenState extends State<Homescreen> {
                   },
                   child: myItems(
                     Icons.assignment,
-                    'Assignment',
+                    'Sakshi',
                     0xff0A0101,
                   ),
                 ),

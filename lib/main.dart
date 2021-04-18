@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Pages/DashBoard/Students/Dashboard.dart';
 import 'Pages/Timetable/time_table.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mahindra University',
-      home: Timetable(),
+      home: Homescreen(),
     );
   }
 }
