@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Pages/Intro&Login/Intro&loginpage.dart';
+import 'package:myapp/Pages/Timetable/time_table.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mahindra University',
-      home: LoginPage(),
+      home: Timetable(),
     );
   }
 }

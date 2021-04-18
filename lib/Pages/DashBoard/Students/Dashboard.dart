@@ -12,7 +12,7 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  Material MyItems(IconData icon, String heading, int color) {
+  Material myItems(IconData icon, String heading, int color) {
     return Material(
       color: Color(0xffE0F7FA),
       shadowColor: Colors.black,
@@ -107,21 +107,21 @@ class _HomescreenState extends State<Homescreen> {
                       ),
                     );
                   },
-                  child: MyItems(
+                  child: myItems(
                     Icons.assignment,
                     'Assignment',
                     0xff0A0101,
                   ),
                 ),
-                MyItems(Icons.grade_outlined, 'Grades', 0xff0A0101),
-                MyItems(Icons.payments_outlined, 'Pay Fee', 0xff0A0101),
-                MyItems(Icons.work_off, 'Holidays', 0xff0A0101),
-                MyItems(Icons.fastfood, 'Food Menu', 0xff0A0101),
-                MyItems(Icons.mark_chat_read, 'Attendance', 0xff0A0101),
-                MyItems(Icons.notifications, 'Anouncement', 0xff0A0101),
-                MyItems(Icons.book_online, 'Study \n Material', 0xff0A0101),
-                MyItems(Icons.text_snippet, 'Exam', 0xff0A0101),
-                MyItems(Icons.access_time, 'Time table', 0xff0A0101),
+                myItems(Icons.grade_outlined, 'Grades', 0xff0A0101),
+                myItems(Icons.payments_outlined, 'Pay Fee', 0xff0A0101),
+                myItems(Icons.work_off, 'Holidays', 0xff0A0101),
+                myItems(Icons.fastfood, 'Food Menu', 0xff0A0101),
+                myItems(Icons.mark_chat_read, 'Attendance', 0xff0A0101),
+                myItems(Icons.notifications, 'Anouncement', 0xff0A0101),
+                myItems(Icons.book_online, 'Study \n Material', 0xff0A0101),
+                myItems(Icons.text_snippet, 'Exam', 0xff0A0101),
+                myItems(Icons.access_time, 'Time table', 0xff0A0101),
               ],
               staggeredTiles: [
                 StaggeredTile.extent(2, 130),

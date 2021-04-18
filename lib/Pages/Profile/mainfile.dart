@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class ProfilePage extends StatelessWidget {
-  List tags = ['travel', 'urban', 'fashion', 'lifestyle', 'editing'];
-  List Categories = [
+  final List tags = ['travel', 'urban', 'fashion', 'lifestyle', 'editing'];
+  final List categories = [
     'Featured',
     'Neon City',
     'Street Art',
@@ -221,7 +221,7 @@ class ProfilePage extends StatelessWidget {
                     height: 40,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: Categories.length,
+                      itemCount: categories.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Padding(
                           padding: const EdgeInsets.only(right: 17.0, top: 10),
@@ -230,7 +230,7 @@ class ProfilePage extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Text(
-                                      Categories[index],
+                                      categories[index],
                                       style: TextStyle(
                                           color: Color(0xff434ae8),
                                           fontSize: 20),
@@ -242,7 +242,7 @@ class ProfilePage extends StatelessWidget {
                                   ],
                                 )
                               : Text(
-                                  Categories[index],
+                                  categories[index],
                                   style: TextStyle(
                                     color: Colors.grey.withOpacity(0.9),
                                     fontSize: 19,

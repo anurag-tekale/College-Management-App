@@ -30,9 +30,7 @@ class _TimetableState extends State<Timetable> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        DateRow(
-                            //list: ["Mon","Tue","wed","thur","fri","sat","sun"],
-                            )
+                        DateRow(),
                       ],
                     ),
                   ),
@@ -158,8 +156,6 @@ class Line extends StatelessWidget {
 }
 
 class DateRow extends StatefulWidget {
-  final List<String> days = ["Mon", "Tue", "wed", "thur", "fri", "sat", "sun"];
-
   @override
   _DateRowState createState() => _DateRowState();
 }
@@ -169,6 +165,17 @@ class _DateRowState extends State<DateRow> {
 
   @override
   Widget build(BuildContext context) {
+    final List<String> days = <String>[
+      "Mon",
+      "Tue",
+      "wed",
+      "thur",
+      "fri",
+      "sat",
+      "sun"
+    ];
+
+    int index;
     return Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: List.generate(
@@ -189,23 +196,22 @@ class _DateRowState extends State<DateRow> {
               padding: EdgeInsets.all(8),
               child: Column(
                 children: <Widget>[
-                  // Text(''
-                  //   // days[index],
-                    
-
+                  Text(
+                    days[index],
+                    style: TextStyle(
+                        fontWeight:
+                            (selectdate ? FontWeight.bold : FontWeight.bold),
+                        fontSize: (selectdate ? 15 : 17),
+                        color: (selectdate ? Colors.red[100] : Colors.white)),
+                  ),
+                  // Text(
+                  //   '${10 + widget.index}',
                   //   style: TextStyle(
                   //       fontWeight:
                   //           (selectdate ? FontWeight.bold : FontWeight.bold),
                   //       fontSize: (selectdate ? 15 : 17),
                   //       color: (selectdate ? Colors.red[100] : Colors.white)),
                   // ),
-                  /* Text(
-              '${10 + widget.index}',
-              style: TextStyle(
-                  fontWeight: (selectdate ? FontWeight.bold : FontWeight.bold),
-                  fontSize: (selectdate ? 15 : 17),
-                  color: (selectdate ? Colors.red[100] : Colors.white)),
-            ),*/
                   Container(
                     width: 4,
                     height: 4,
