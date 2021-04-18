@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/Timetable/time_table.dart';
+import 'Pages/Timetable/time_table.dart';
 
 void main() {
   runApp(MyApp());

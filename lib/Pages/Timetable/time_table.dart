@@ -28,11 +28,12 @@ class _TimetableState extends State<Timetable> {
                   Padding(
                     padding: const EdgeInsets.only(top: 21.0),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        DateRow(),
-                      ],
-                    ),
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: List.generate(
+                            7,
+                            (index) => DateRow(
+                                  index: index,
+                                ))),
                   ),
                 ],
               ),
@@ -156,74 +157,60 @@ class Line extends StatelessWidget {
 }
 
 class DateRow extends StatefulWidget {
+  final index;
+
+  const DateRow({Key key, this.index}) : super(key: key);
   @override
   _DateRowState createState() => _DateRowState();
 }
 
 class _DateRowState extends State<DateRow> {
   bool selectdate = true;
+  var list = ['Mon', 'Tue', 'Wed', 'Th', 'Fr', 'Sat', 'Sun'];
 
   @override
   Widget build(BuildContext context) {
-    final List<String> days = <String>[
-      "Mon",
-      "Tue",
-      "wed",
-      "thur",
-      "fri",
-      "sat",
-      "sun"
-    ];
-
-    int index;
-    return Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: List.generate(
-          7,
-          (index) => InkWell(
-            onTap: () {
-              setState(() {
-                selectdate = !selectdate;
-              });
-            },
-            child: Container(
-              decoration: selectdate
-                  ? null
-                  : BoxDecoration(
-                      color: Colors.black38,
-                      borderRadius: BorderRadius.all(Radius.circular(6)),
-                    ),
-              padding: EdgeInsets.all(8),
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    days[index],
-                    style: TextStyle(
-                        fontWeight:
-                            (selectdate ? FontWeight.bold : FontWeight.bold),
-                        fontSize: (selectdate ? 15 : 17),
-                        color: (selectdate ? Colors.red[100] : Colors.white)),
-                  ),
-                  // Text(
-                  //   '${10 + widget.index}',
-                  //   style: TextStyle(
-                  //       fontWeight:
-                  //           (selectdate ? FontWeight.bold : FontWeight.bold),
-                  //       fontSize: (selectdate ? 15 : 17),
-                  //       color: (selectdate ? Colors.red[100] : Colors.white)),
-                  // ),
-                  Container(
-                    width: 4,
-                    height: 4,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: selectdate ? Colors.red[100] : Colors.white),
-                  ),
-                ],
+    return InkWell(
+      onTap: () {
+        setState(() {
+          selectdate = !selectdate;
+        });
+      },
+      child: Container(
+        decoration: selectdate
+            ? null
+            : BoxDecoration(
+                color: Colors.black38,
+                borderRadius: BorderRadius.all(Radius.circular(6)),
               ),
+        padding: EdgeInsets.all(8),
+        child: Column(
+          children: <Widget>[
+            Text(
+              list[widget.index],
+              style: TextStyle(
+                  fontWeight: (selectdate ? FontWeight.bold : FontWeight.bold),
+                  fontSize: (selectdate ? 15 : 17),
+                  color: (selectdate ? Colors.red[100] : Colors.white)),
             ),
-          ),
-        ));
+            Text(
+              '${10 + widget.index}',
+              style: TextStyle(
+                  fontWeight: (selectdate ? FontWeight.bold : FontWeight.bold),
+                  fontSize: (selectdate ? 15 : 17),
+                  color: (selectdate ? Colors.red[100] : Colors.white)),
+            ),
+            Container(
+              width: 4,
+              height: 4,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: selectdate ? Colors.red[100] : Colors.white),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
