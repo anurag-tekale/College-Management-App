@@ -12,9 +12,9 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  Material myItems(IconData icon, String heading, int color) {
+  Material MyItems(IconData icon, String heading, int color) {
     return Material(
-      color: Color(0xffE0F7FA),
+      color: Color(0xffFFFFFF),
       shadowColor: Colors.black,
 
       elevation: 16,
@@ -35,7 +35,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: Text(
                       heading,
                       style: TextStyle(
-                        color: new Color(color),
+                        color: Colors.black,
                         fontSize: 20,
                       ),
                     ),
@@ -79,91 +79,222 @@ class _HomescreenState extends State<Homescreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios),
-        backgroundColor: Color(0XffEA3A4F),
-        title: Text("Student's Dashboard"),
-        centerTitle: true,
-      ),
-      body: SizedBox.expand(
-        child: PageView(
-          controller: _pageController,
-          onPageChanged: (index) {
-            setState(() => _currentIndex = index);
-          },
-          children: <Widget>[
-            StaggeredGridView.count(
-              crossAxisCount: 2,
-              crossAxisSpacing: 12,
-              mainAxisSpacing: 12,
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              children: <Widget>[
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => AssignmentsPage(),
+    return SafeArea(
+      child: Scaffold(
+        body: SizedBox.expand(
+          child: PageView(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() => _currentIndex = index);
+            },
+            children: <Widget>[
+              StaggeredGridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 8,
+                mainAxisSpacing: 8,
+                children: <Widget>[
+                  Stack(
+                    children: <Widget>[
+                      Container(
+                        //margin: EdgeInsets.all(100.0),
+                        height: 200,
+                        decoration: BoxDecoration(
+                            color: Colors.blue[800],
+                            shape: BoxShape.rectangle,
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(100.0),
+                                bottomRight: Radius.circular(100.0))),
+                        child: Column(
+                          children: <Widget>[
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: <Widget>[
+                                IconButton(
+                                  icon: Icon(Icons.menu),
+                                  color: Colors.white,
+                                  iconSize: 30,
+                                  onPressed: () {},
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  'DASHBOARD',
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    // fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    );
-                  },
-                  child: myItems(
-                    Icons.assignment,
-                    'Assignment',
-                    0xff0A0101,
+                      Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Container(
+                            //margin: EdgeInsets.all(100.0),
+                            height: 300,
+//profile container
+                            child: Center(
+                              child: Container(
+                                height: 200,
+                                width: 350,
+                                decoration: BoxDecoration(
+                                    boxShadow: [
+                                      new BoxShadow(
+                                        color: Colors.grey,
+                                        blurRadius: 10.0,
+                                      ),
+                                    ],
+                                    color: Colors.white,
+                                    shape: BoxShape.rectangle,
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Center(
+                                      child: Column(
+                                        children: <Widget>[
+                                          CircleAvatar(
+                                            radius: 50.0,
+                                            backgroundImage: NetworkImage(
+                                                'https://images.unsplash.com/photo-1563889958749-625da26ed355?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMxfEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60'),
+                                            backgroundColor: Colors.transparent,
+                                          ),
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            'Jacob Black',
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Text(
+                                            'Std - Cse',
+                                            style: TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.grey,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ),
-                myItems(Icons.grade_outlined, 'Grades', 0xff0A0101),
-                myItems(Icons.payments_outlined, 'Pay Fee', 0xff0A0101),
-                myItems(Icons.work_off, 'Holidays', 0xff0A0101),
-                myItems(Icons.fastfood, 'Food Menu', 0xff0A0101),
-                myItems(Icons.mark_chat_read, 'Attendance', 0xff0A0101),
-                myItems(Icons.notifications, 'Anouncement', 0xff0A0101),
-                myItems(Icons.book_online, 'Study \n Material', 0xff0A0101),
-                myItems(Icons.text_snippet, 'Exam', 0xff0A0101),
-                myItems(Icons.access_time, 'Time table', 0xff0A0101),
-              ],
-              staggeredTiles: [
-                StaggeredTile.extent(2, 130),
-                StaggeredTile.extent(1, 300),
-                StaggeredTile.extent(1, 150),
-                StaggeredTile.extent(1, 150),
-                StaggeredTile.extent(2, 240),
-                StaggeredTile.extent(2, 130),
-                StaggeredTile.extent(1, 150),
-                StaggeredTile.extent(1, 150),
-                StaggeredTile.extent(1, 150),
-                StaggeredTile.extent(1, 150),
-              ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => AssignmentsPage(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:
+                          MyItems(Icons.assignment, 'Assignment', 0xff2196F3),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MyItems(Icons.grade_outlined, 'Grades', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child:
+                        MyItems(Icons.payments_outlined, 'Pay Fee', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MyItems(Icons.work_off, 'Holidays', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MyItems(Icons.fastfood, 'Food Menu', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child:
+                        MyItems(Icons.mark_chat_read, 'Attendance', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child:
+                        MyItems(Icons.notifications, 'Anouncement', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MyItems(
+                        Icons.book_online, 'Study Material', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MyItems(Icons.text_snippet, 'Exam', 0xff2196F3),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: MyItems(Icons.access_time, 'Time table', 0xff2196F3),
+                  ),
+                ],
+                staggeredTiles: [
+                  StaggeredTile.extent(2, 330),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                  StaggeredTile.extent(1, 150),
+                ],
+              ),
+            ],
+          ),
+        ),
+        bottomNavigationBar: BottomNavyBar(
+          selectedIndex: _currentIndex,
+          onItemSelected: (index) {
+            setState(() => _currentIndex = index);
+            _pageController.jumpToPage(index);
+          },
+          items: [
+            BottomNavyBarItem(
+              icon: Icon(Icons.apps),
+              title: Text('Home'),
+              activeColor: Colors.red,
             ),
+            BottomNavyBarItem(
+                icon: Icon(Icons.people),
+                title: Text('Users'),
+                activeColor: Colors.purpleAccent),
+            BottomNavyBarItem(
+                icon: Icon(Icons.message),
+                title: Text('Messages'),
+                activeColor: Colors.pink),
+            BottomNavyBarItem(
+                icon: Icon(Icons.settings),
+                title: Text('Settings'),
+                activeColor: Colors.blue),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavyBar(
-        selectedIndex: _currentIndex,
-        onItemSelected: (index) {
-          setState(() => _currentIndex = index);
-          _pageController.jumpToPage(index);
-        },
-        items: [
-          BottomNavyBarItem(
-            icon: Icon(Icons.apps),
-            title: Text('Home'),
-            activeColor: Colors.red,
-          ),
-          BottomNavyBarItem(
-              icon: Icon(Icons.people),
-              title: Text('Users'),
-              activeColor: Colors.purpleAccent),
-          BottomNavyBarItem(
-              icon: Icon(Icons.message),
-              title: Text('Messages'),
-              activeColor: Colors.pink),
-          BottomNavyBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
-              activeColor: Colors.blue),
-        ],
       ),
     );
   }
