@@ -28,12 +28,14 @@ class _TimetableState extends State<Timetable> {
                   Padding(
                     padding: const EdgeInsets.only(top: 21.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: List.generate(
-                            7,
-                            (index) => DateRow(
-                                  index: index,
-                                ))),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: List.generate(
+                        7,
+                        (index) => DateRow(
+                          index: index,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
