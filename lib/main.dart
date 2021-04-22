@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Pages/DashBoard/Students/Dashboard.dart';
 import 'Pages/Timetable/time_table.dart';
+import 'Pages/Profile/mainfile.dart';
 
 void main() {
   runApp(MyApp());
