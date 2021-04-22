@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:myapp/Pages/Assignments/mainfile.dart';
+import 'package:myapp/Pages/Chat/Homepage.dart';
 
 //import 'package:flutter_palette/flutter_palette.dart';
 class Homescreen extends StatefulWidget {
@@ -99,11 +100,13 @@ class _HomescreenState extends State<Homescreen> {
                         //margin: EdgeInsets.all(100.0),
                         height: 200,
                         decoration: BoxDecoration(
-                            color: Colors.blue[800],
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(100.0),
-                                bottomRight: Radius.circular(100.0))),
+                          color: Colors.blue[800],
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(100.0),
+                            bottomRight: Radius.circular(100.0),
+                          ),
+                        ),
                         child: Column(
                           children: <Widget>[
                             SizedBox(
@@ -139,21 +142,22 @@ class _HomescreenState extends State<Homescreen> {
                           Container(
                             //margin: EdgeInsets.all(100.0),
                             height: 300,
-//profile container
+                            //profile container
                             child: Center(
                               child: Container(
                                 height: 200,
                                 width: 350,
                                 decoration: BoxDecoration(
-                                    boxShadow: [
-                                      new BoxShadow(
-                                        color: Colors.grey,
-                                        blurRadius: 10.0,
-                                      ),
-                                    ],
-                                    color: Colors.white,
-                                    shape: BoxShape.rectangle,
-                                    borderRadius: BorderRadius.circular(20)),
+                                  boxShadow: [
+                                    new BoxShadow(
+                                      color: Colors.grey,
+                                      blurRadius: 10.0,
+                                    ),
+                                  ],
+                                  color: Colors.white,
+                                  shape: BoxShape.rectangle,
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                                 child: Column(
                                   children: <Widget>[
                                     SizedBox(
@@ -235,8 +239,8 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child:
-                        MyItems(Icons.notifications, 'Anouncement', 0xff2196F3),
+                    child: MyItems(
+                        Icons.notifications, 'Announcement', 0xff2196F3),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -265,6 +269,13 @@ class _HomescreenState extends State<Homescreen> {
                   StaggeredTile.extent(1, 150),
                   StaggeredTile.extent(1, 150),
                 ],
+              ),
+              Container(
+                color: Colors.red[100],
+              ),
+              HomePageChat(),
+              Container(
+                color: Colors.red[100],
               ),
             ],
           ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Pages/DashBoard/Students/Dashboard.dart';
+import 'Pages/Intro&Login/Intro&loginpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Mahindra University',
-      home: Homescreen(),
+      home: LoginPage(),
     );
   }
 }
