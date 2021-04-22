@@ -5,6 +5,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:myapp/Pages/Assignments/mainfile.dart';
 import 'package:myapp/Pages/Chat/Homepage.dart';
+import 'package:myapp/Pages/Timetable/time_table.dart';
 
 //import 'package:flutter_palette/flutter_palette.dart';
 class Homescreen extends StatefulWidget {
@@ -120,7 +121,7 @@ class _HomescreenState extends State<Homescreen> {
                                   iconSize: 30,
                                   onPressed: () {},
                                 ),
-                                SizedBox(width: 10),
+                                SizedBox(width: 75),
                                 Text(
                                   'DASHBOARD',
                                   style: TextStyle(
@@ -251,9 +252,19 @@ class _HomescreenState extends State<Homescreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: MyItems(Icons.text_snippet, 'Exam', 0xff2196F3),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.access_time, 'Time table', 0xff2196F3),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Timetable(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:
+                          MyItems(Icons.access_time, 'Time table', 0xff2196F3),
+                    ),
                   ),
                 ],
                 staggeredTiles: [
