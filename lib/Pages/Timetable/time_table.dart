@@ -28,12 +28,14 @@ class _TimetableState extends State<Timetable> {
                   Padding(
                     padding: const EdgeInsets.only(top: 21.0),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: List.generate(
-                            7,
-                            (index) => DateRow(
-                                  index: index,
-                                ))),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: List.generate(
+                        7,
+                        (index) => DateRow(
+                          index: index,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -225,6 +227,19 @@ class TopRow extends StatelessWidget {
       children: <Widget>[
         Row(
           children: <Widget>[
+            IconButton(
+              icon: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.white,
+                size: 25,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            SizedBox(
+              width: 95,
+            ),
             Text(
               'Time',
               style: TextStyle(
@@ -234,7 +249,7 @@ class TopRow extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 8.0,
+              width: 4.0,
             ),
             Text(
               'table',
