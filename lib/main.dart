@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/Intro&Login/Intro&loginpage.dart';
+import 'Pages/Studymaterial/mainfile.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       title: 'Mahindra University',
-      home: LoginPage(),
+      home: Studymaterial(),
     );
   }
 }

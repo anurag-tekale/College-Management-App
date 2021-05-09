@@ -34,6 +34,7 @@ dependencies:
   flutter_palette: ^1.1.0+1
   flutter_svg: ^0.21.0+1
   google_fonts: ^2.0.0
+  font_awesome_flutter: ^9.0.0
   bottom_navy_bar: ^6.0.0
 
 dev_dependencies:
