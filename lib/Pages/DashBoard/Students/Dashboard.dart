@@ -14,12 +14,13 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  Material MyItems(IconData icon, String heading, int color) {
+  Material MyItems(
+      IconData icon, String heading, int color1, int color2, int color3) {
     return Material(
-      color: Color(0xffFFFFFF),
-      shadowColor: Colors.black,
+      color: new Color(color1),
+      // shadowColor: Colors.black,
 
-      elevation: 16,
+      // elevation: 16,
       //shadowColor:
       borderRadius: BorderRadius.circular(24),
       child: Center(
@@ -31,27 +32,30 @@ class _HomescreenState extends State<Homescreen> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  SizedBox(
+                    height: 15,
+                  ),
+                  //icon button
+                  Material(
+                    color: new Color(color2),
+                    borderRadius: BorderRadius.circular(40),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Icon(
+                        icon,
+                        color: new Color(color3),
+                        size: 30,
+                      ),
+                    ),
+                  ),
                   //text
                   Padding(
                     padding: const EdgeInsets.all(8),
                     child: Text(
                       heading,
                       style: TextStyle(
-                        color: Colors.black,
+                        color: new Color(color3),
                         fontSize: 20,
-                      ),
-                    ),
-                  ),
-                  //icon button
-                  Material(
-                    color: new Color(color),
-                    borderRadius: BorderRadius.circular(40),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Icon(
-                        icon,
-                        color: Colors.white,
-                        size: 30,
                       ),
                     ),
                   ),
@@ -212,45 +216,49 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child:
-                          MyItems(Icons.assignment, 'Assignment', 0xff2196F3),
+                      child: MyItems(Icons.assignment, 'Assignment', 0xffF8BBD0,
+                          0xffFCE4EC, 0xffCF1162),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.grade_outlined, 'Grades', 0xff2196F3),
+                    child: MyItems(Icons.grade_outlined, 'Grades', 0xffD1C4E9,
+                        0xffEDE7F6, 0xff311B94),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child:
-                        MyItems(Icons.payments_outlined, 'Pay Fee', 0xff2196F3),
+                    child: MyItems(Icons.payments_outlined, 'Pay Fee',
+                        0xffFFF59D, 0xffFFF8E1, 0xffF57F17),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.work_off, 'Holidays', 0xff2196F3),
+                    child: MyItems(Icons.work_off, 'Holidays', 0xffB3E5Fc,
+                        0xffE0F7FA, 0xff00E5FF),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.fastfood, 'Food Menu', 0xff2196F3),
+                    child: MyItems(Icons.fastfood, 'Food Menu', 0xffffcdd2,
+                        0xffFCE4EC, 0xffff17f4),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child:
-                        MyItems(Icons.mark_chat_read, 'Attendance', 0xff2196F3),
+                    child: MyItems(Icons.mark_chat_read, 'Attendance',
+                        0xffdcedc8, 0xffF9fbe7, 0xfffaeea00),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(
-                        Icons.notifications, 'Announcement', 0xff2196F3),
+                    child: MyItems(Icons.notifications, 'Announcement',
+                        0xffe1bee7, 0xffF3e5f5, 0xff4a148c),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(
-                        Icons.book_online, 'Study Material', 0xff2196F3),
+                    child: MyItems(Icons.book_online, 'Study Material',
+                        0xffb2dfdb, 0xffe0f2f1, 0xff009688),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.text_snippet, 'Exam', 0xff2196F3),
+                    child: MyItems(Icons.text_snippet, 'Exam', 0xffccff90,
+                        0xffe8f5e9, 0xff1b5e20),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -262,8 +270,8 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child:
-                          MyItems(Icons.access_time, 'Time table', 0xff2196F3),
+                      child: MyItems(Icons.access_time, 'Time table',
+                          0xff64ffda, 0xffe0f7fa, 0xff004d40),
                     ),
                   ),
                 ],
