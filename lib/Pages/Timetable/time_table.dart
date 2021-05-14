@@ -15,11 +15,11 @@ class _TimetableState extends State<Timetable> {
         child: Column(
           children: <Widget>[
             Container(
-              height: 64,
-              color: Color(0xffEA3A4F),
+              height: 25,
+              color: Color(0xFF544ecc),
             ),
             Container(
-              color: Color(0xffEA3A4F),
+              color: Color(0xFF544ecc),
               padding: EdgeInsets.all(16),
               child: Column(
                 mainAxisSize: MainAxisSize.min,

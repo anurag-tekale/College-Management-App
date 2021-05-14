@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
-import 'package:myapp/Pages/Assignments/mainfile.dart';
 
 class Profile extends StatefulWidget {
   @override

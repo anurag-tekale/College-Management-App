@@ -58,17 +58,21 @@ class _ExamListState extends State<ExamList> {
                     height: 100,
                   ),
                   Center(
-                      child: FlatButton(
-                    minWidth: 300.0,
-                    height: 100.0,
-                    color: Color(0xffe0f7fa),
+                      child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xffe0f7fa),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
+                    ),
+                    // minWidth: 300.0,
+                    // height: 100.0,
                     onPressed: () {
                       showDialog(
                           context: context,
                           builder: (BuildContext context) => leadDialog);
                     },
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
+
                     child: Text(
                       "Minor I",
                       style: TextStyle(
@@ -81,42 +85,53 @@ class _ExamListState extends State<ExamList> {
                     height: 50,
                   ),
                   Center(
-                      child: FlatButton(
-                    minWidth: 300.0,
-                    height: 100.0,
-                    color: Color(
-                      0xffe0f7fa,
-                    ),
-                    onPressed: () {
-                      showDialog(
-                          context: context,
-                          builder: (BuildContext context) => leadDialog);
-                    },
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
-                    child: Text(
-                      "Minor II",
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Color(0xff00695c),
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50.0)),
+                        backgroundColor: Color(
+                          0xffe0f7fa,
+                        ),
+                      ),
+                      // minWidth: 300.0,
+                      // height: 100.0,
+                      // color: Color(
+                      //   0xffe0f7fa,
+                      // ),
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) => leadDialog);
+                      },
+                      // shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(50.0)),
+                      child: Text(
+                        "Minor II",
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Color(0xff00695c),
+                        ),
                       ),
                     ),
-                  )),
+                  ),
                   SizedBox(
                     height: 50,
                   ),
                   Center(
-                      child: FlatButton(
-                    minWidth: 300.0,
-                    height: 100.0,
-                    color: Color(0xffe0f7fa),
+                      child: TextButton(
+                    style: TextButton.styleFrom(
+                      backgroundColor: Color(0xffe0f7fa),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50.0)),
+                    ),
+                    // minWidth: 300.0,
+                    // height: 100.0,
+                    // color:
                     onPressed: () {
                       showDialog(
                           context: context,
                           builder: (BuildContext context) => leadDialog);
                     },
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50.0)),
                     child: Text(
                       "End Sem",
                       style: TextStyle(

@@ -39,7 +39,7 @@ class _AssignmentsPageState extends State<AssignmentsPage> {
           Container(
             padding: EdgeInsets.all(35.0),
             decoration: BoxDecoration(
-              color: Color(0xFFBEA3A4F),
+              color: Color(0xFF544ecc),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(50.0),
                 topRight: Radius.circular(50.0),

@@ -24,17 +24,22 @@ class _FoodMenuState extends State<FoodMenu> {
                 height: 50,
                 child: Row(
                   children: <Widget>[
-                    Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                      ),
                     ),
                     SizedBox(
-                      width: 120,
+                      width: 100,
                     ),
                     Text(
                       "Food Menu",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 25,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),

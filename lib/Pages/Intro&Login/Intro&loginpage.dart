@@ -11,7 +11,7 @@ class _LoginPageState extends State<LoginPage> {
   int _pageState = 0;
 
   var _backgroundColor = Colors.white;
-  var _headingColor = Color(0xFFB40284A);
+  var _headingColor = Colors.black;
 
   double _headingTop = 100;
 
@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
         _registerYOffset = windowHeight;
         break;
       case 1:
-        _backgroundColor = Color(0xFFBEA3A4F);
+        _backgroundColor = Color(0xFF544ecc);
         _headingColor = Colors.white;
 
         _headingTop = 90;
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
         _registerYOffset = windowHeight;
         break;
       case 2:
-        _backgroundColor = Color(0xFFBEA3A4F);
+        _backgroundColor = Color(0xFF544ecc);
         _headingColor = Colors.white;
 
         _headingTop = 80;
@@ -154,13 +154,15 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     child: GestureDetector(
                       onTap: () {
-                        setState(() {
-                          if (_pageState != 0) {
-                            _pageState = 0;
-                          } else {
-                            _pageState = 1;
-                          }
-                        });
+                        setState(
+                          () {
+                            if (_pageState != 0) {
+                              _pageState = 0;
+                            } else {
+                              _pageState = 1;
+                            }
+                          },
+                        );
                       },
                       child: Container(
                         margin: EdgeInsets.all(32),
@@ -168,7 +170,8 @@ class _LoginPageState extends State<LoginPage> {
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Color(
-                                0xFFB40284A), // Button color ( Get Started )
+                              0xFF544ecc,
+                            ), // Button color ( Get Started )
                             borderRadius: BorderRadius.circular(50)),
                         child: Center(
                           child: Text(
@@ -190,10 +193,12 @@ class _LoginPageState extends State<LoginPage> {
             transform:
                 Matrix4.translationValues(_loginXOffset, _loginYOffset, 1),
             decoration: BoxDecoration(
-                color: Colors.white.withOpacity(_loginOpacity),
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25))),
+              color: Colors.white.withOpacity(_loginOpacity),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25),
+                topRight: Radius.circular(25),
+              ),
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -203,7 +208,10 @@ class _LoginPageState extends State<LoginPage> {
                       margin: EdgeInsets.only(bottom: 20),
                       child: Text(
                         "Login To Continue",
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     InputWithIcon(
@@ -378,7 +386,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Color(0xFFB40284A), borderRadius: BorderRadius.circular(50)),
+          color: Color(0xFF544ecc), borderRadius: BorderRadius.circular(50)),
       padding: EdgeInsets.all(20),
       child: Center(
         child: Text(

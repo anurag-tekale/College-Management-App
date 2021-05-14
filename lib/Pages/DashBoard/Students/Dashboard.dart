@@ -3,7 +3,10 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:myapp/Pages/Assignments/mainfile.dart';
 import 'package:myapp/Pages/Chat/Homepage.dart';
+import 'package:myapp/Pages/Foodmenu/foodmenu.dart';
+import 'package:myapp/Pages/Holidays/holidays_listing_screen.dart';
 import 'package:myapp/Pages/Timetable/time_table.dart';
+import 'package:myapp/Pages/Todolist/mainfile.dart';
 
 //import 'package:flutter_palette/flutter_palette.dart';
 class Homescreen extends StatefulWidget {
@@ -12,7 +15,7 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  Material MyItems(
+  Material myItems(
       IconData icon, String heading, int color1, int color2, int color3) {
     return Material(
       color: new Color(color1),
@@ -103,7 +106,7 @@ class _HomescreenState extends State<Homescreen> {
                         //margin: EdgeInsets.all(100.0),
                         height: 200,
                         decoration: BoxDecoration(
-                          color: Colors.blue[800],
+                          color: Color(0xFF544ecc),
                           shape: BoxShape.rectangle,
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(100.0),
@@ -214,48 +217,61 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: MyItems(Icons.assignment, 'Assignment', 0xffF8BBD0,
+                      child: myItems(Icons.assignment, 'Assignment', 0xffF8BBD0,
                           0xffFCE4EC, 0xffCF1162),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.grade_outlined, 'Grades', 0xffD1C4E9,
+                    child: myItems(Icons.grade_outlined, 'Grades', 0xffD1C4E9,
                         0xffEDE7F6, 0xff311B94),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.payments_outlined, 'Pay Fee',
+                    child: myItems(Icons.payments_outlined, 'Pay Fee',
                         0xffFFF59D, 0xffFFF8E1, 0xffF57F17),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.work_off, 'Holidays', 0xffB3E5Fc,
-                        0xffE0F7FA, 0xff00E5FF),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: myItems(Icons.work_off, 'Holidays', 0xffB3E5Fc,
+                  //       0xffE0F7FA, 0xff00E5FF),
+                  // ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => FoodMenu(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: myItems(Icons.fastfood, 'Food Menu', 0xffffcdd2,
+                          0xffFCE4EC, 0xffff17f4),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => HolidaysListingScreen(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: myItems(Icons.work_off, 'Holidays', 0xffe1bee7,
+                          0xffF3e5f5, 0xff4a148c),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.fastfood, 'Food Menu', 0xffffcdd2,
-                        0xffFCE4EC, 0xffff17f4),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.mark_chat_read, 'Attendance',
-                        0xffdcedc8, 0xffF9fbe7, 0xfffaeea00),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.notifications, 'Announcement',
-                        0xffe1bee7, 0xffF3e5f5, 0xff4a148c),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.book_online, 'Study Material',
+                    child: myItems(Icons.book_online, 'Study Material',
                         0xffb2dfdb, 0xffe0f2f1, 0xff009688),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: MyItems(Icons.text_snippet, 'Exam', 0xffccff90,
+                    child: myItems(Icons.text_snippet, 'Exam', 0xffccff90,
                         0xffe8f5e9, 0xff1b5e20),
                   ),
                   GestureDetector(
@@ -268,8 +284,22 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: MyItems(Icons.access_time, 'Time table',
+                      child: myItems(Icons.access_time, 'Time table',
                           0xff64ffda, 0xffe0f7fa, 0xff004d40),
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ToDoPage(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: myItems(Icons.mark_chat_read, 'ToDo List',
+                          0xffdcedc8, 0xffF9fbe7, 0xfffaeea00),
                     ),
                   ),
                 ],
@@ -284,7 +314,7 @@ class _HomescreenState extends State<Homescreen> {
                   StaggeredTile.extent(1, 150),
                   StaggeredTile.extent(1, 150),
                   StaggeredTile.extent(1, 150),
-                  StaggeredTile.extent(1, 150),
+                  // StaggeredTile.extent(1, 150),
                 ],
               ),
               Container(

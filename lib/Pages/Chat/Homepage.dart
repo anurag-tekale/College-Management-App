@@ -26,7 +26,7 @@ class _HomePageChatState extends State<HomePageChat> {
         title: Text(
           'Chat',
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),

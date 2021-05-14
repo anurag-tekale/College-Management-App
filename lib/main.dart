@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Pages/DashBoard/Students/Dashboard.dart';
+import 'Pages/Intro&Login/Intro&loginpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,12 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.red,
+        primaryColor: Color(0xFF544ecc),
         accentColor: Color(0xffffecb3),
       ),
       debugShowCheckedModeBanner: false,
       title: 'Mahindra University',
-      home: Homescreen(),
+      home: LoginPage(),
     );
   }
 }
