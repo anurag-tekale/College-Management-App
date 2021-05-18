@@ -16,10 +16,10 @@ class _TimetableState extends State<Timetable> {
           children: <Widget>[
             Container(
               height: 25,
-              color: Color(0xFF544ecc),
+              color: Color(0xff004d40),
             ),
             Container(
-              color: Color(0xFF544ecc),
+              color: Color(0xff004d40),
               padding: EdgeInsets.all(16),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -100,7 +100,7 @@ class CardWidget extends StatelessWidget {
               height: 100,
               child: Container(
                 margin: EdgeInsets.only(left: 4),
-                color: Color(0xffE0F2F1),
+                color: Color(0xffe0f7fa),
                 padding: EdgeInsets.only(left: 16, top: 8),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

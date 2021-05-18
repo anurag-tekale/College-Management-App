@@ -11,7 +11,7 @@ class _FoodMenuState extends State<FoodMenu> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xff8255FF),
+        backgroundColor: Color(0xffF26ACB),
         body: Column(
           children: <Widget>[
             SizedBox(
@@ -146,7 +146,7 @@ class _ItemsCardState extends State<ItemsCard> {
                       widget.name,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Color(0xff8255FF),
+                        color: Color(0xffF26ACB),
                         fontSize: 25,
                       ),
                     ),
@@ -180,7 +180,7 @@ class _ItemsCardState extends State<ItemsCard> {
         height: 100,
         width: 384,
         decoration: BoxDecoration(
-          color: Color(0xffE8E0FF),
+          color: Color(0xffFFEFFF),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
               topRight: Radius.circular(10),
@@ -203,7 +203,7 @@ class _ItemsCardState extends State<ItemsCard> {
                 widget.name,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff8255FF),
+                  color: Color(0xffF26ACB),
                   fontSize: 40,
                 ),
               ),

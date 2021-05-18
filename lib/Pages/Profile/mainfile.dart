@@ -16,13 +16,13 @@ class _ProfilePageState extends State<ProfilePage> {
               children: <Widget>[
                 Container(
                   //margin: EdgeInsets.all(100.0),
-                  height: 300,
+                  height: 286,
                   decoration: BoxDecoration(
-                      color: Colors.blue[800],
+                      color: Color(0xFF6C60E0),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(100.0),
-                          bottomRight: Radius.circular(100.0))),
+                          bottomLeft: Radius.circular(30.0),
+                          bottomRight: Radius.circular(30.0))),
                   child: Column(
                     children: <Widget>[
                       SizedBox(
@@ -53,7 +53,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Column(
                   children: <Widget>[
                     SizedBox(
-                      height: 60,
+                      height: 50,
                     ),
                     Container(
                       //margin: EdgeInsets.all(100.0),
@@ -229,11 +229,11 @@ class _ProfilePageState extends State<ProfilePage> {
               child: Row(
                 children: <Widget>[
                   Text(
-                    'Personal Information',
+                    'Portfolio',
                     style: TextStyle(color: Colors.blue, fontSize: 22),
                   ),
                   SizedBox(
-                    width: 90,
+                    width: 215,
                   ),
                   Icon(
                     Icons.arrow_forward_sharp,

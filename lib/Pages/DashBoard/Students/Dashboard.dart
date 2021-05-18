@@ -7,6 +7,13 @@ import 'package:myapp/Pages/Foodmenu/foodmenu.dart';
 import 'package:myapp/Pages/Holidays/holidays_listing_screen.dart';
 import 'package:myapp/Pages/Timetable/time_table.dart';
 import 'package:myapp/Pages/Todolist/mainfile.dart';
+import 'package:myapp/Pages/grades/mainpage.dart';
+import 'package:myapp/Pages/payfee/fee_details.dart';
+import 'package:myapp/Pages/Studymaterial/mainfile.dart';
+import 'package:myapp/Pages/Profile/mainfile.dart';
+import 'package:myapp/Pages/settings/setting.dart';
+
+import '../../ExamSchedule/ExamList.dart';
 
 //import 'package:flutter_palette/flutter_palette.dart';
 class Homescreen extends StatefulWidget {
@@ -277,15 +284,34 @@ class _HomescreenState extends State<Homescreen> {
                           0xffFFFAE7, 0xffFAC078),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: myItems(Icons.grade_outlined, 'Grades', 0xffD7EFFF,
-                        0xffF1F9FF, 0xff53AAF8),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Grades(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: myItems(Icons.grade_outlined, 'Grades', 0xffD7EFFF,
+                          0xffF1F9FF, 0xff53AAF8),
+                    ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: myItems(Icons.payments_outlined, 'Pay Fee',
-                        0xffE0D7FF, 0xffF4F1FF, 0xff9B83F4),
+
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => FeeDetails(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: myItems(Icons.payments_outlined, 'Pay Fee',
+                          0xffE0D7FF, 0xffF4F1FF, 0xff9B83F4),
+                    ),
                   ),
                   // Padding(
                   //   padding: const EdgeInsets.all(8.0),
@@ -321,15 +347,33 @@ class _HomescreenState extends State<Homescreen> {
                           0xffE3FFF6, 0xff4AAE8C),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: myItems(Icons.book_online, 'Study Material',
-                        0xffFFDFCD, 0xffFFF2EB, 0xffFE8F77),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Studymaterial(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: myItems(Icons.book_online, 'Study Material',
+                          0xffFFDFCD, 0xffFFF2EB, 0xffFE8F77),
+                    ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: myItems(Icons.text_snippet, 'Exam', 0xffccff90,
-                        0xffe8f5e9, 0xff1b5e20),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => ExamList(),
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: myItems(Icons.text_snippet, 'Exam', 0xffccff90,
+                          0xffe8f5e9, 0xff1b5e20),
+                    ),
                   ),
                   GestureDetector(
                     onTap: () {
@@ -375,13 +419,9 @@ class _HomescreenState extends State<Homescreen> {
                   // StaggeredTile.extent(1, 150),
                 ],
               ),
-              Container(
-                color: Colors.red[100],
-              ),
+              ProfilePage(),
               HomePageChat(),
-              Container(
-                color: Colors.red[100],
-              ),
+              Settings(),
             ],
           ),
         ),
