@@ -15,7 +15,7 @@ class _FeeDetailsState extends State<FeeDetails> {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                color: Color(0xff8255FF),
+                color: Color(0xff020415),
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30)),
@@ -38,18 +38,18 @@ class _FeeDetailsState extends State<FeeDetails> {
                               Navigator.of(context).pop();
                             },
                             child: Icon(
-                              Icons.arrow_back,
+                              Icons.arrow_back_ios,
                               color: Colors.white,
                               size: 30,
                             ),
                           ),
                           SizedBox(
-                            width: 75,
+                            width: 85,
                           ),
                           Text(
                             "Fee Details",
                             style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 28,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -70,7 +70,7 @@ class _FeeDetailsState extends State<FeeDetails> {
                 width: 400,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: Color(0xffB4A9FF),
+                  color: Color(0xff6d98d7),
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                   boxShadow: [
                     BoxShadow(
@@ -134,7 +134,7 @@ class _FeeDetailsState extends State<FeeDetails> {
                           // SizedBox(width: 50),
                           Container(
                             decoration: BoxDecoration(
-                              color: Color(0xff2EDBEE),
+                              color: Color(0xff6d98d7),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(15)),
                               boxShadow: [
@@ -350,7 +350,7 @@ class _FeeDetailsState extends State<FeeDetails> {
                 Container(
                   height: 40,
                   decoration: BoxDecoration(
-                    color: Color(0xff2EDBEE),
+                    color: Color(0xff6d98d7),
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     //BoxShadow
                   ),
@@ -371,7 +371,7 @@ class _FeeDetailsState extends State<FeeDetails> {
             Container(
               height: 40,
               decoration: BoxDecoration(
-                color: Color(0xff2EDBEE),
+                color: Color(0xff6d98d7),
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 //BoxShadow
               ),

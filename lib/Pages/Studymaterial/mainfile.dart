@@ -6,11 +6,12 @@ class Studymaterial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff020415),
         title: Text(
           'Study Material',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 20,
+            fontSize: 28,
             letterSpacing: 1.0,
           ),
         ),

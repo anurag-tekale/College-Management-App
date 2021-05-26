@@ -53,8 +53,8 @@ class _LoginPageState extends State<LoginPage> {
 
     switch (_pageState) {
       case 0:
-        _backgroundColor = Colors.white;
-        _headingColor = Color(0xFFB40284A); // IntroPage Learn Free text color
+        _backgroundColor = Color(0xff020415);
+        _headingColor = Colors.white; // IntroPage Learn Free text color
 
         _headingTop = 100;
 
@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
         _registerYOffset = windowHeight;
         break;
       case 1:
-        _backgroundColor = Color(0xFF544ecc);
+        _backgroundColor = Color(0xff020415);
         _headingColor = Colors.white;
 
         _headingTop = 90;
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
         _registerYOffset = windowHeight;
         break;
       case 2:
-        _backgroundColor = Color(0xFF544ecc);
+        _backgroundColor = Color(0xff020415);
         _headingColor = Colors.white;
 
         _headingTop = 80;
@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                               top: _headingTop,
                             ),
                             child: Text(
-                              "Learn Free",
+                              "App Name",
                               style:
                                   TextStyle(color: _headingColor, fontSize: 28),
                             ),
@@ -135,10 +135,13 @@ class _LoginPageState extends State<LoginPage> {
                             margin: EdgeInsets.all(20),
                             padding: EdgeInsets.symmetric(horizontal: 32),
                             child: Text(
-                              "We make learning easy. Join Tvac Studio to learn flutter for free on YouTube.",
+                              "You don’t have to be great to start. But you have to start to be great",
                               textAlign: TextAlign.center,
-                              style:
-                                  TextStyle(color: _headingColor, fontSize: 16),
+                              style: TextStyle(
+                                color: _headingColor,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           )
                         ],
@@ -170,13 +173,12 @@ class _LoginPageState extends State<LoginPage> {
                         width: double.infinity,
                         decoration: BoxDecoration(
                             color: Color(
-                              0xFF544ecc,
-                            ), // Button color ( Get Started )
+                                0xff6d98d7), // Button color ( Get Started )
                             borderRadius: BorderRadius.circular(50)),
                         child: Center(
                           child: Text(
                             "Get Started",
-                            style: TextStyle(color: Colors.white, fontSize: 16),
+                            style: TextStyle(color: Colors.white, fontSize: 22),
                           ),
                         ),
                       ),
@@ -386,7 +388,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Color(0xFF544ecc), borderRadius: BorderRadius.circular(50)),
+          color: Color(0xff6d98d7), borderRadius: BorderRadius.circular(50)),
       padding: EdgeInsets.all(20),
       child: Center(
         child: Text(

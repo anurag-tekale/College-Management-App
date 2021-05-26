@@ -64,6 +64,7 @@ class _HomescreenState extends State<Homescreen> {
                       style: TextStyle(
                         color: new Color(color3),
                         fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -95,6 +96,9 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(
+          0xff020415,
+        ), // Bu,
         body: SizedBox.expand(
           child: PageView(
             controller: _pageController,
@@ -111,7 +115,7 @@ class _HomescreenState extends State<Homescreen> {
                     //margin: EdgeInsets.all(100.0),
                     height: 100,
                     decoration: BoxDecoration(
-                      color: Color(0xFF6C60E0),
+                      color: Color(0xff020415),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(30.0),
@@ -161,7 +165,7 @@ class _HomescreenState extends State<Homescreen> {
                                 Text(
                                   '  Hi Jacob!',
                                   style: TextStyle(
-                                    fontSize: 25,
+                                    fontSize: 23,
                                     color: Colors.white,
                                   ),
                                 ),
@@ -198,10 +202,10 @@ class _HomescreenState extends State<Homescreen> {
                           child: Container(
                             height: 50,
                             decoration: BoxDecoration(
-                                color: Color(0xffA7A0EC),
+                                color: Color(0xff6d98d7),
                                 shape: BoxShape.rectangle,
                                 borderRadius: BorderRadius.all(
-                                  Radius.circular(30.0),
+                                  Radius.circular(25.0),
                                 )),
                             child: Row(
                               children: [
@@ -239,6 +243,7 @@ class _HomescreenState extends State<Homescreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
+                            color: Colors.white,
                           ),
                         ),
                         SizedBox(
@@ -259,12 +264,12 @@ class _HomescreenState extends State<Homescreen> {
                         ),
                         Icon(
                           Icons.arrow_upward,
-                          color: Color(0xff6C60E0),
+                          color: Colors.white,
                           size: 30,
                         ),
                         Icon(
                           Icons.arrow_downward,
-                          color: Color(0xff6C60E0),
+                          color: Colors.white,
                           size: 30,
                         ),
                       ],
@@ -280,8 +285,8 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: myItems(Icons.assignment, 'Assignment', 0xffFFF3C6,
-                          0xffFFFAE7, 0xffFAC078),
+                      child: myItems(Icons.assignment, 'Assignment', 0x3dffffff,
+                          0x3dffffff, 0xffffffff),
                     ),
                   ),
                   GestureDetector(
@@ -294,8 +299,8 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: myItems(Icons.grade_outlined, 'Grades', 0xffD7EFFF,
-                          0xffF1F9FF, 0xff53AAF8),
+                      child: myItems(Icons.grade_outlined, 'Grades', 0x3dffffff,
+                          0x3dffffff, 0xffffffff),
                     ),
                   ),
 
@@ -310,7 +315,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: myItems(Icons.payments_outlined, 'Pay Fee',
-                          0xffE0D7FF, 0xffF4F1FF, 0xff9B83F4),
+                          0x3dffffff, 0x3dffffff, 0xffffffff),
                     ),
                   ),
                   // Padding(
@@ -328,8 +333,8 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: myItems(Icons.fastfood, 'Food Menu', 0xffFBE1FB,
-                          0xffFFEFFF, 0xffF26ACB),
+                      child: myItems(Icons.fastfood, 'Food Menu', 0x3dffffff,
+                          0x3dffffff, 0xffffffff),
                     ),
                   ),
                   GestureDetector(
@@ -343,8 +348,8 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: myItems(Icons.work_off, 'Holidays', 0xffB8EEDC,
-                          0xffE3FFF6, 0xff4AAE8C),
+                      child: myItems(Icons.work_off, 'Holidays', 0x3dffffff,
+                          0x3dffffff, 0xffffffff),
                     ),
                   ),
                   GestureDetector(
@@ -358,7 +363,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: myItems(Icons.book_online, 'Study Material',
-                          0xffFFDFCD, 0xffFFF2EB, 0xffFE8F77),
+                          0x3dffffff, 0x3dffffff, 0xffffffff),
                     ),
                   ),
                   GestureDetector(
@@ -371,8 +376,8 @@ class _HomescreenState extends State<Homescreen> {
                     },
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: myItems(Icons.text_snippet, 'Exam', 0xffccff90,
-                          0xffe8f5e9, 0xff1b5e20),
+                      child: myItems(Icons.text_snippet, 'Exam', 0x3dffffff,
+                          0x3dffffff, 0xffffffff),
                     ),
                   ),
                   GestureDetector(
@@ -386,7 +391,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: myItems(Icons.access_time, 'Time table',
-                          0xff64ffda, 0xffe0f7fa, 0xff004d40),
+                          0x3dffffff, 0x3dffffff, 0xffffffff),
                     ),
                   ),
                   GestureDetector(
@@ -400,7 +405,7 @@ class _HomescreenState extends State<Homescreen> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: myItems(Icons.mark_chat_read, 'ToDo List',
-                          0xffdcedc8, 0xffF9fbe7, 0xfffaeea00),
+                          0x3dffffff, 0x3dffffff, 0xffffffff),
                     ),
                   ),
                 ],
@@ -426,6 +431,7 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ),
         bottomNavigationBar: BottomNavyBar(
+          backgroundColor: Color(0xff020415),
           selectedIndex: _currentIndex,
           onItemSelected: (index) {
             setState(() => _currentIndex = index);

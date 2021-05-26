@@ -18,7 +18,7 @@ class _SettingsState extends State<Settings> {
             //margin: EdgeInsets.all(100.0),
             height: 200,
             decoration: BoxDecoration(
-              color: Color(0xFF6C60E0),
+              color: Color(0xff020415),
               shape: BoxShape.rectangle,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30.0),
@@ -59,7 +59,7 @@ class _SettingsState extends State<Settings> {
                   child: Container(
                     height: 50,
                     decoration: BoxDecoration(
-                        color: Color(0xffA7A0EC),
+                        color: Color(0x3dffffff),
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.all(
                           Radius.circular(30.0),

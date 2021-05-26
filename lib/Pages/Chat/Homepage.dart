@@ -13,8 +13,9 @@ class _HomePageChatState extends State<HomePageChat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Color(0xff020415),
       appBar: AppBar(
+        backgroundColor: Color(0xff020415),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
@@ -26,7 +27,7 @@ class _HomePageChatState extends State<HomePageChat> {
         title: Text(
           'Chat',
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 28,
             fontWeight: FontWeight.bold,
           ),
         ),

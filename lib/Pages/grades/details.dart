@@ -14,7 +14,7 @@ class _SemDetailsState extends State<SemDetails> {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                color: Color(0xff8255FF),
+                color: Color(0xff020415),
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30)),
@@ -36,18 +36,18 @@ class _SemDetailsState extends State<SemDetails> {
                               Navigator.of(context).pop();
                             },
                             child: Icon(
-                              Icons.arrow_back,
+                              Icons.arrow_back_ios,
                               color: Colors.white,
                               size: 30,
                             ),
                           ),
                           SizedBox(
-                            width: 75,
+                            width: 85,
                           ),
                           Text(
                             "Sem Details",
                             style: TextStyle(
-                                fontSize: 30,
+                                fontSize: 28,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           ),

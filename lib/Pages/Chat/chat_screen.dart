@@ -27,7 +27,7 @@ class _ChatScreenState extends State<ChatScreen> {
       padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       width: MediaQuery.of(context).size.width * 0.75,
       decoration: BoxDecoration(
-        color: isMe ? Theme.of(context).accentColor : Color(0xFFFFEFEE),
+        color: isMe ? Theme.of(context).accentColor : Color(0xff6d98d7),
         borderRadius: isMe
             ? BorderRadius.only(
                 topLeft: Radius.circular(15.0),
@@ -44,7 +44,7 @@ class _ChatScreenState extends State<ChatScreen> {
           Text(
             message.time,
             style: TextStyle(
-              color: Colors.blueGrey,
+              color: Colors.white,
               fontSize: 16.0,
               fontWeight: FontWeight.w600,
             ),
@@ -53,7 +53,7 @@ class _ChatScreenState extends State<ChatScreen> {
           Text(
             message.text,
             style: TextStyle(
-              color: Colors.blueGrey,
+              color: Colors.white,
               fontSize: 16.0,
               fontWeight: FontWeight.w600,
             ),
@@ -117,8 +117,9 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      // backgroundColor: Color(0xff020415),
       appBar: AppBar(
+        backgroundColor: Color(0xff020415),
         title: Text(
           widget.user.name,
           style: TextStyle(

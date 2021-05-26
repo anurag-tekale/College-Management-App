@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kCardColor = Color(0xFF282B30);
+const kCardColor = Color(0x3dffffff);
 // const kHourColor = Color(0xFF544ecc);
 const kBGColor = Color(0xFF343537);
 

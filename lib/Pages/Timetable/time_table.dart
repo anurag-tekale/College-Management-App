@@ -16,10 +16,10 @@ class _TimetableState extends State<Timetable> {
           children: <Widget>[
             Container(
               height: 25,
-              color: Color(0xff004d40),
+              color: Color(0xff020415),
             ),
             Container(
-              color: Color(0xff004d40),
+              color: Color(0xff020415),
               padding: EdgeInsets.all(16),
               child: Column(
                 mainAxisSize: MainAxisSize.min,

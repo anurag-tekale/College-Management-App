@@ -11,7 +11,7 @@ class ToDoPage extends StatefulWidget {
 }
 
 class _ToDoPageState extends State<ToDoPage> {
-  Color _themeColor = Color(0xff30384c);
+  Color _themeColor = Color(0xff020415);
   CalendarController calController;
   TextEditingController tfTitleController = TextEditingController();
   TextEditingController tfDecController = TextEditingController();

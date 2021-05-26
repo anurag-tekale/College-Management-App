@@ -18,7 +18,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   //margin: EdgeInsets.all(100.0),
                   height: 286,
                   decoration: BoxDecoration(
-                      color: Color(0xFF6C60E0),
+                      color: Color(0xff020415),
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(30.0),
@@ -31,16 +31,16 @@ class _ProfilePageState extends State<ProfilePage> {
                       Row(
                         children: <Widget>[
                           IconButton(
-                            icon: Icon(Icons.arrow_back_rounded),
+                            icon: Icon(Icons.arrow_back_ios),
                             color: Colors.white,
                             iconSize: 30,
                             onPressed: () {},
                           ),
-                          SizedBox(width: 80),
+                          SizedBox(width: 85),
                           Text(
                             'PROFILE',
                             style: TextStyle(
-                              fontSize: 30,
+                              fontSize: 28,
                               // fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
@@ -67,7 +67,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               boxShadow: [
                                 new BoxShadow(
                                   color: Colors.grey,
-                                  blurRadius: 10.0,
+                                  blurRadius: 5.0,
                                 ),
                               ],
                               color: Colors.white,
@@ -191,7 +191,7 @@ class _ProfilePageState extends State<ProfilePage> {
             height: 50,
             width: 350,
             decoration: BoxDecoration(
-                color: Colors.blueGrey[100],
+                color: Color(0xff6d98d7),
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(10)),
             child: Padding(
@@ -200,14 +200,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: <Widget>[
                   Text(
                     'Personal Information',
-                    style: TextStyle(color: Colors.blue, fontSize: 22),
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                   SizedBox(
                     width: 90,
                   ),
                   Icon(
                     Icons.arrow_forward_sharp,
-                    color: Colors.blue,
+                    color: Colors.white,
                     size: 30,
                   ),
                 ],
@@ -221,7 +221,7 @@ class _ProfilePageState extends State<ProfilePage> {
             height: 50,
             width: 350,
             decoration: BoxDecoration(
-                color: Colors.blueGrey[100],
+                color: Color(0xff6d98d7),
                 shape: BoxShape.rectangle,
                 borderRadius: BorderRadius.circular(10)),
             child: Padding(
@@ -230,14 +230,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 children: <Widget>[
                   Text(
                     'Portfolio',
-                    style: TextStyle(color: Colors.blue, fontSize: 22),
+                    style: TextStyle(color: Colors.white, fontSize: 22),
                   ),
                   SizedBox(
                     width: 215,
                   ),
                   Icon(
                     Icons.arrow_forward_sharp,
-                    color: Colors.blue,
+                    color: Colors.white,
                     size: 30,
                   ),
                 ],

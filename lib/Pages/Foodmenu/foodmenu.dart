@@ -11,7 +11,7 @@ class _FoodMenuState extends State<FoodMenu> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffF26ACB),
+        backgroundColor: Color(0xff020415),
         body: Column(
           children: <Widget>[
             SizedBox(
@@ -34,12 +34,12 @@ class _FoodMenuState extends State<FoodMenu> {
                       ),
                     ),
                     SizedBox(
-                      width: 100,
+                      width: 85,
                     ),
                     Text(
                       "Food Menu",
                       style: TextStyle(
-                          fontSize: 25,
+                          fontSize: 28,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
@@ -120,7 +120,7 @@ class _ItemsCardState extends State<ItemsCard> {
         width: 384,
         child: Container(
           decoration: BoxDecoration(
-            color: Color(0xffE8E0FF),
+            color: Color(0xff6d98d7),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10),
                 topRight: Radius.circular(10),
@@ -146,7 +146,7 @@ class _ItemsCardState extends State<ItemsCard> {
                       widget.name,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Color(0xffF26ACB),
+                        color: Colors.white,
                         fontSize: 25,
                       ),
                     ),
@@ -154,6 +154,7 @@ class _ItemsCardState extends State<ItemsCard> {
                       widget.date,
                       style: TextStyle(
                         fontSize: 20,
+                        color: Colors.white,
                       ),
                     )
                   ],
@@ -180,7 +181,7 @@ class _ItemsCardState extends State<ItemsCard> {
         height: 100,
         width: 384,
         decoration: BoxDecoration(
-          color: Color(0xffFFEFFF),
+          color: Color(0xff6d98d7),
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
               topRight: Radius.circular(10),
@@ -203,14 +204,16 @@ class _ItemsCardState extends State<ItemsCard> {
                 widget.name,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color(0xffF26ACB),
-                  fontSize: 40,
+                  color: Colors.white,
+                  fontSize: 30,
                 ),
               ),
+              SizedBox(height: 15),
               Text(
                 widget.date,
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
+                  color: Colors.white
                 ),
               )
             ],
@@ -282,7 +285,7 @@ class Items extends StatefulWidget {
 class _ItemsState extends State<Items> {
   bool selectdate = true;
   var list = [
-    'Idaly',
+    'Idly',
     'Wada',
     'Sambhar',
     'Coconut/Ginger Chutney',
@@ -295,6 +298,7 @@ class _ItemsState extends State<Items> {
       list[widget.index],
       style: TextStyle(
         fontSize: 20,
+        color: Colors.white
       ),
     );
   }

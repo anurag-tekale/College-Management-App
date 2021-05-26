@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         primaryColor: Color(0xFF544ecc),
-        accentColor: Color(0xffffecb3),
+        accentColor: Color(0xff6d98d7),
       ),
       debugShowCheckedModeBanner: false,
       title: 'Mahindra University',

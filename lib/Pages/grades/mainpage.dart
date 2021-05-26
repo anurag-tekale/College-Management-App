@@ -16,7 +16,7 @@ class _GradesState extends State<Grades> {
             //top heading
             Container(
               decoration: BoxDecoration(
-                color: Color(0xff8255FF),
+                color: Color(0xff020415),
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30)),
@@ -38,7 +38,7 @@ class _GradesState extends State<Grades> {
                               Navigator.of(context).pop();
                             },
                             child: Icon(
-                              Icons.arrow_back,
+                              Icons.arrow_back_ios,
                               color: Colors.white,
                               size: 30,
                             ),
@@ -59,11 +59,14 @@ class _GradesState extends State<Grades> {
                   ),
                   //student info
                   Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: Container(
                       decoration: BoxDecoration(
-                          color: Color(0xffA085FF),
-                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                        color: Color(0x3dffffff),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(25),
+                        ),
+                      ),
                       child: Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: Column(
@@ -159,7 +162,7 @@ class _ButtonState extends State<Button> {
       width: 150,
       height: 70,
       decoration: BoxDecoration(
-        color: Color(0xffAAF0F8),
+        color: Color(0xff6d98d7),
         borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -176,7 +179,10 @@ class _ButtonState extends State<Button> {
           },
           child: Text(
             widget.label,
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+            ),
           )),
     );
   }
