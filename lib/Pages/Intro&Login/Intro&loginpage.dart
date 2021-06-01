@@ -126,9 +126,9 @@ class _LoginPageState extends State<LoginPage> {
                               top: _headingTop,
                             ),
                             child: Text(
-                              "App Name",
+                              "College Management App",
                               style:
-                                  TextStyle(color: _headingColor, fontSize: 28),
+                                  TextStyle(color: _headingColor, fontSize: 20),
                             ),
                           ),
                           Container(
