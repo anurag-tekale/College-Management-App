@@ -1,6 +1,6 @@
-# myapp
+# College Management App
 
-A new Flutter project.
+College Project.
 
 ## Getting Started
 
